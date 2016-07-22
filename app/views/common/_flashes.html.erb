@@ -1,0 +1,7 @@
+<% if flash.any? %>
+<% user_facing_flashes.each do |key, value| %>
+<div class="close" data-dismiss="alert">x</button>
+  <%=value %>
+</div>
+<% end %>
+<% end %>
