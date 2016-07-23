@@ -9,6 +9,14 @@ class GroupsController < ApplicationController
   end
 
 
+  def show
+    @group = Group.find(params[:id])
+  end
+
+  def edit
+    @group = Group.find(params[:id])
+  end
+
   def create
     @group =Group.new(group_params)
     @group.save
@@ -19,7 +27,7 @@ class GroupsController < ApplicationController
   private
 
   def group_params
-    params.requrie(:group).permit(:title, :description)
+    params.require(:group).permit(:title, :description)
   end
 
 
